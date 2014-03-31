@@ -5,6 +5,10 @@ body {
   padding-top: 75px;
 }
 
+.languages.show .links-container {
+  padding-top: 120px;
+}
+
 .navbar {
   border-bottom: 0px;
 }
@@ -69,4 +73,10 @@ ul {
 
 .navbar-brand img {
   margin-left: -60px;
+}
+
+.add-link-button {
+  font-size: 20px;
+  float: right;
+  padding-top: 50px;
 }

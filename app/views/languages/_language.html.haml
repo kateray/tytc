@@ -3,7 +3,11 @@
     .heading
       .container
         = link_to language.name, language_path(language)
-  .container
+        - if params[:action] == "show"
+          .add-link-button
+            %a{:href=>"#add"}
+              + add link
+  .container.links-container
     %ul.col-md-12
       - if params[:action] == "index"
         = render language.links.first(3)
