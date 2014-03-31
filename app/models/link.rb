@@ -32,6 +32,16 @@ class Link < ActiveRecord::Base
   validates :level, presence: true
   validates :user, presence: true
 
+  after_create :initial_vote
+
+  def initial_vote
+    Vote.create do |v|
+      v.link_id = self.id
+      v.user_id = self.user_id
+    end
+  end
+
+
   #TODO Very Bad
   def level_name
     if level == 1

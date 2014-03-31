@@ -38,16 +38,25 @@ img.avatar {
   padding: 10px;
   font-weight: bold;
   color: black;
+  position: relative;
+  z-index: 10;
+
 
   &.sticky {
     position: fixed;
     left: 0px;
     visibility: hidden;
     width: 100%;
-    z-index: 10;
+    z-index: 9;
   }
 }
 
+.languages .heading {
+  position: fixed;
+  left: 0px;
+  width: 100%;
+  z-index: 10;
+}
 .footer {
   background: gray;
   height: 300px;
