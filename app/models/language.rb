@@ -15,7 +15,13 @@ class Language < ActiveRecord::Base
 
   validates :name, presence: true, uniqueness: { case_sensitive: false }
 
+  before_create :generate_slug
+
+  def generate_slug
+    self.slug = self.name.downcase.gsub(/[\.\s]/, "-")
+  end
+
   def to_param
-    name
+    slug
   end
 end

@@ -16,8 +16,11 @@
     .link-expanded.collapse
       .link-description
         = link.description
-      .link-author
-        submitted by
-        = link_to link.user.username, "http://github.com/#{link.user.username}", :target=>"_blank"
+        %span.link-author
+          = "- "
+          = link_to "@#{link.user.username}", "http://github.com/#{link.user.username}", :target=>"_blank"
+      -# .link-author
+      -#   submitted by
+      -#   = link_to link.user.username, "http://github.com/#{link.user.username}", :target=>"_blank"
       = link_to "Start Tutorial ->", link.url, :target=>"_blank", :class=> "link-url"
       %div{:style=>"clear:both"}

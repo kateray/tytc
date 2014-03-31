@@ -50,19 +50,26 @@ li {
     font-size: 20px;
     line-height: 1.5;
     margin-bottom: 20px;
-  }
+    font-style: italic;
 
-  .link-author {
-    position: absolute;
-    bottom: 5px;
-    font-size: 18px;
-    color: gray;
 
-    a {
-      color: gray;
-      text-decoration: underline;
+    .link-author {
+      font-style: normal;
     }
   }
+
+
+  // .link-author {
+  //   position: absolute;
+  //   bottom: 5px;
+  //   font-size: 18px;
+  //   color: gray;
+  //
+  //   a {
+  //     color: gray;
+  //     text-decoration: underline;
+  //   }
+  // }
 
   .link-url {
     float: right;

@@ -3,6 +3,7 @@ class CreateLanguages < ActiveRecord::Migration
     create_table :languages do |t|
       t.string :name
       t.integer :links_count
+      t.string :slug
       t.timestamps
     end
   end

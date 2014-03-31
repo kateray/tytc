@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20140331150039) do
   create_table "languages", force: true do |t|
     t.string   "name"
     t.integer  "links_count"
+    t.string   "slug"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
