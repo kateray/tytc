@@ -48,4 +48,8 @@ class User < ActiveRecord::Base
     return user
   end
 
+  def is_god?
+    god == true
+  end
+
 end

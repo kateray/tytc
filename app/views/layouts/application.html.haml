@@ -26,7 +26,8 @@
           .nav.navbar-nav.navbar-right
             about |
             - if current_user
-              = current_user.username
+              = image_tag(current_user.avatar_url, class: "avatar")
+              = link_to('sign out', destroy_user_session_path, :method => :delete)
             - else
               = link_to "sign in", user_omniauth_authorize_path(:github)
 

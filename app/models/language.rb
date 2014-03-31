@@ -14,4 +14,8 @@ class Language < ActiveRecord::Base
   has_many :links, through: :tags, order: 'votes_count'
 
   validates :name, presence: true, uniqueness: { case_sensitive: false }
+
+  def to_param
+    name
+  end
 end

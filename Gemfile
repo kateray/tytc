@@ -32,3 +32,4 @@ end
 gem 'devise'
 gem 'figaro'
 gem 'omniauth-github'
+gem 'rails_admin'
