@@ -1,0 +1,92 @@
+@import 'variables';
+
+
+a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+
+li {
+  list-style-type: none;
+}
+
+.link-star {
+  left: 10px;
+  top: 30px;
+  position: absolute;
+}
+
+.link-container {
+
+  padding-left: 40px;
+}
+
+
+.link {
+  position: relative;
+  font-size: 3em;
+
+  padding: 0px;
+  border-bottom: 1px solid silver;
+  cursor: pointer;
+
+
+  .link-head {
+    padding: 30px 0px;
+  }
+  .link-title {
+    padding: 3px;
+  }
+  .link-metadata {
+    font-size: 20px;
+  }
+
+  &:hover {
+    background: $light-gray;
+  }
+
+  .link-description {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+
+  .link-author {
+    position: absolute;
+    bottom: 5px;
+    font-size: 18px;
+    color: gray;
+
+    a {
+      color: gray;
+      text-decoration: underline;
+    }
+  }
+
+  .link-url {
+    float: right;
+    background: #72ff1f;
+    font-size: 35px;
+    padding: 10px;
+
+    &:hover {
+      background: #72ff1f;
+    }
+  }
+
+  .level-tag {
+    margin: 5px;
+    text-align: center;
+    padding: 3px;
+    background: #ffdb00;
+  }
+
+  .votes-count {
+    margin: 5px;
+  }
+
+  .voted-user {
+    width: 25px;
+  }
+}

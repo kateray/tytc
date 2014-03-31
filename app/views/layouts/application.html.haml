@@ -1,0 +1,35 @@
+!!! XML
+!!!
+%html{:lang=>'en'}
+  %head
+    %meta{:charset=>"utf-8"}
+    %meta{"http-equiv"=>"X-UA-Compatible", :content=>"IE=edge"}
+    %meta{:name=>"viewport", :content=>"width=device-width, initial-scale=1"}
+    %title teach yourself to code
+    <meta name = "description" content = "Link sharing site for the best programming tutorials and resources">
+    = stylesheet_link_tag "application"
+    = javascript_include_tag "application"
+    = csrf_meta_tag
+  %body{:class => "#{controller_name} #{action_name}"}
+    - if flash[:error]
+      = content_tag :div, flash[:error], :class => "alert alert-danger"
+
+    %nav.navbar.navbar-default.navbar-fixed-top{:role=>"navigation"}
+      .container
+        .col-md-12
+          .navbar-header
+            %a.navbar-brand{:href => "/"}
+              %img{:src => "/assets/code-logo.png"}
+              teach yourself to code
+
+
+          .nav.navbar-nav.navbar-right
+            about |
+            - if current_user
+              = current_user.username
+            - else
+              = link_to "sign in", user_omniauth_authorize_path(:github)
+
+    = yield
+    -# = render "/shared/sessions_popup"
+    .footer

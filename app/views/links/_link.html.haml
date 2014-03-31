@@ -1,0 +1,23 @@
+%li.link{"data-id" => link.id}
+  .link-star
+    *
+  .link-container
+    .link-head
+      %span.link-title
+        = link.title
+      %span.link-metadata
+        %span.level-tag
+          = link.level_name
+        %span.votes-count
+          %i.vote-button.fa.fa-check
+          %span.user-votes
+            = render link.votes
+
+    .link-expanded.collapse
+      .link-description
+        = link.description
+      .link-author
+        submitted by
+        = link_to link.user.username, "http://github.com/#{link.user.username}", :target=>"_blank"
+      = link_to "Start Tutorial ->", link.url, :target=>"_blank", :class=> "link-url"
+      %div{:style=>"clear:both"}

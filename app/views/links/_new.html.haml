@@ -1,0 +1,43 @@
+.container
+  %ul.col-md-12
+    %li#add
+      .new-link-container
+        .header
+          .link-star +
+          .header-title
+            Add a new link
+        .link-container
+          = form_for @link, html: {class: "form-horizontal", role: "form"} do |f|
+            = f.hidden_field :language, value: @language.id
+            .form-group
+              = f.label :first_name, "What do you build?"
+              = f.text_field :title
+            .form-group
+              = f.label :url, "URL"
+              = f.text_field :url, value: "http://", type: "url"
+            .form-group
+              = f.label :description, "Why is this the best way to learn #{@language.name}?"
+              = f.text_area :description
+            .row
+              What level?
+              .btn-group{"data-toggle"=>"buttons"}
+                .btn.btn-primary
+                  = f.radio_button :level, 1
+                  Beginner
+                .btn.btn-primary
+                  = f.radio_button :level, 2
+                  Intermediate
+                .btn.btn-primary
+                  = f.radio_button :level, 3
+                  Advanced
+            .row
+              Is it free?
+              .btn-group{"data-toggle"=>"buttons"}
+                .btn.btn-primary
+                  = f.radio_button :free, true
+                  Yes
+                .btn.btn-primary
+                  = f.radio_button :free, false
+                  No
+            .row
+              = f.submit "Submit", class: 'submit-link'
