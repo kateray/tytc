@@ -38,11 +38,11 @@ ready = ->
     history.pushState('', '', baseUrl)
 
   window.onpopstate = (event) ->
-    # TODO: sometimes there is no links
-    linkID = location.pathname.match(/\/links\/(.*)/)[1]
-    $el = $('.link[data-id="'+linkID+'"]')
-    $el.find('.link-expanded').addClass('in')
-    $('body').scrollTop($el.position().top)
+    if location.pathname.match(/\/links\/(.*)/)
+      linkID = location.pathname.match(/\/links\/(.*)/)[1]
+      $el = $('.link[data-id="'+linkID+'"]')
+      $el.find('.link-expanded').addClass('in')
+      $('body').scrollTop($el.position().top)
 
   if $('body').hasClass('home')
     $(".language-container").each ->
