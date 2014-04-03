@@ -12,11 +12,11 @@
               + add link
   .container.links-container
     %ul.col-md-12
-      - if params[:action] == "index"
+      - if params[:action] == "home"
         = render language.links.first(3)
         %li.link
           .link-container
-            .link-head
-              = "See all #{language.name} tutorials"
+            .link-head.see-all
+              = link_to "See all #{language.name} tutorials", language_path(language)
       - else
         = render language.links
