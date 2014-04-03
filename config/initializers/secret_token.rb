@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Tytc::Application.config.secret_key_base = '2befcf2cd98914477a592e34e6debc1eb9dcf739a9638be9d7bc7e818ba36edd381429db22aa34d590bf329736e311933c641b895f9947236f583d857c52dd2e'
+Tytc::Application.config.secret_key_base = ENV['TYTC_SECRET']
