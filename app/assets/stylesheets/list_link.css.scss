@@ -13,7 +13,7 @@ li {
 
 .link-container {
 
-  padding-left: 40px;
+  // padding-left: 40px;
 }
 
 
@@ -96,18 +96,34 @@ li {
     }
   }
 
-  .level-tag {
+  .level-tag, .free-tag {
     margin: 5px;
     font-size: 15px;
     text-align: center;
     padding: 5px;
-    background: $yellow;
     position: relative;
     bottom: 5px;
     font-weight: bold;
   }
+  .free-tag {
+    background: $dark-green;
+  }
+  .level-tag {
 
-  .user-votes {
+
+    &.Beginner {
+      background: $yellow;
+    }
+    &.Intermediate {
+      background: $orange;
+    }
+    &.Advanced {
+      background: $red;
+    }
+  }
+
+
+  .user-votes img {
     position: relative;
     bottom: 5px;
     margin: 5px;

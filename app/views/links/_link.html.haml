@@ -1,23 +1,24 @@
 %li.link{"data-id" => link.id, "data-url" => language_link_path(link.tag.language, link), class: ('new-link' if flash[:new_link_id] == link.id) }
-  .link-star
-    *
   .link-container
     .link-head
       %span.link-title
         = link.title
       %span.link-metadata
-        %span.level-tag
+        %span.level-tag{class: link.level_name}
           = link.level_name
-        %span.votes-count
+        - if !link.free
+          %span.free-tag
+            $$
+        .votes-count
           %span.user-votes
-            = render link.votes
-          - if current_user
-            - if current_user.voted_on?(link.id)
-              %i.checkmark.voted.fa.fa-check.fa-2x
+            - if current_user
+              - if current_user.voted_on?(link.id)
+                %i.checkmark.voted.fa.fa-check.fa-2x
+              - else
+                %i.checkmark.vote-button.fa.fa-check.fa-2x
             - else
-              %i.checkmark.vote-button.fa.fa-check.fa-2x
-          - else
-            %i.checkmark.fa.fa-check.fa-2x{"data-toggle"=>"modal", "data-target"=>".login-form"}
+              %i.checkmark.fa.fa-check.fa-2x{"data-toggle"=>"modal", "data-target"=>".login-form"}
+            = render link.votes
 
     .link-expanded.collapse
       .link-description
