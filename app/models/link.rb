@@ -20,6 +20,7 @@ class Link < ActiveRecord::Base
   belongs_to :user
   has_many :votes, inverse_of: :link
   has_one :tag, inverse_of: :link
+  #TODO this isn't working
   has_one :language, through: :tag
 
   BEGINNER = 1

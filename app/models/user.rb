@@ -52,4 +52,8 @@ class User < ActiveRecord::Base
     god == true
   end
 
+  def voted_on?(link_id)
+    votes.where(link_id: link_id).any?
+  end
+
 end

@@ -1,0 +1,16 @@
+.modal.fade.login-form{"aria-hidden" => "true", "aria-labelledby" => "myLargeModalLabel", role: "dialog", tabindex: "-1"}
+  .modal-dialog.modal-sm
+    .modal-content
+      .modal-header
+        Sign in
+        %button{type:"button", class:"close", "data-dismiss"=>"modal", "aria-hidden"=>"true"} &times;
+      .modal-body.container-fluid
+        Sign in with
+        = link_to "GitHub", user_omniauth_authorize_path(:github)
+        %br
+        %a{href: user_omniauth_authorize_path(:github)}
+          .login-with-github
+        -# = link_to image_tag("github-round.png"), user_omniauth_authorize_path(:github)
+        .explanation
+          Don't know GitHub? It's a code-sharing site, and a good first step to programming.
+          = link_to "Create an account", "https://github.com", target: "_blank"

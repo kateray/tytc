@@ -26,10 +26,25 @@ vote = (e) ->
       $el.find('.user-votes').append(data)
 
 ready = ->
-  $('.link-container').click ->
+  baseUrl = history.state.url
+
+  $('.link').click ->
     $(this).find('.link-expanded').collapse('toggle')
 
-  if $('body').hasClass('index')
+  $(".link-expanded").on "shown.bs.collapse", ->
+    history.pushState('', '', $(this).closest('.link').data('url'))
+
+  $(".link-expanded").on "hidden.bs.collapse", ->
+    history.pushState('', '', baseUrl)
+
+  window.onpopstate = (event) ->
+    # TODO: sometimes there is no links
+    linkID = location.pathname.match(/\/links\/(.*)/)[1]
+    $el = $('.link[data-id="'+linkID+'"]')
+    $el.find('.link-expanded').addClass('in')
+    $('body').scrollTop($el.position().top)
+
+  if $('body').hasClass('home')
     $(".language-container").each ->
       $clonedHeaderRow = $(".heading", this)
       $clonedHeaderRow.before($clonedHeaderRow.clone()).addClass("sticky").css('top', $('.navbar').height())
@@ -38,6 +53,26 @@ ready = ->
     $(window).scroll(stickyHeaders)
 
   $('.vote-button').click(vote)
+
+  $('a').click (e) ->
+    if !@hash? || window.location.pathname != @pathname
+      return
+
+    targetOffset = $(@hash).offset().top
+
+    $('body, html')
+      .stop()
+      .animate(
+        { scrollTop: targetOffset },
+        400,
+        =>
+          window.history.replaceState(null, null, this.href)
+      )
+
+    return false
+
+  $('.new-link').delay(2500).css('background-color', 'inherit')
+
 
 $(document).ready(ready)
 $(document).on('page:load', ready)

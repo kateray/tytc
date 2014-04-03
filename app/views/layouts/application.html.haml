@@ -11,8 +11,8 @@
     = javascript_include_tag "application"
     = csrf_meta_tag
   %body{:class => "#{controller_name} #{action_name}"}
-    - if flash[:error]
-      = content_tag :div, flash[:error], :class => "alert alert-danger"
+    -# - if flash[:error]
+    -#   = content_tag :div, flash[:error], :class => "alert alert-danger"
 
     %nav.navbar.navbar-default.navbar-fixed-top{:role=>"navigation"}
       .container
@@ -24,13 +24,15 @@
 
 
           .nav.navbar-nav.navbar-right
-            about |
+            = link_to('about', '#about')
+            |
             - if current_user
               = image_tag(current_user.avatar_url, class: "avatar")
               = link_to('sign out', destroy_user_session_path, :method => :delete)
             - else
-              = link_to "sign in", user_omniauth_authorize_path(:github)
+              %span.login-link{"data-toggle"=>"modal", "data-target"=>".login-form"}
+                sign in
 
     = yield
-    -# = render "/shared/sessions_popup"
-    .footer
+    = render "/shared/login"
+    .footer#about

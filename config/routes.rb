@@ -1,12 +1,21 @@
 Tytc::Application.routes.draw do
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
-  
+
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 
-  resources :links
+  # resources :links
   resources :votes
 
-  get '/:language', to: 'languages#show', as: 'language'
+  # TODO: cleanup routes
 
-  root to: "links#index"
+  # resources :languages do
+  #   resources :links
+  # end
+  get ':language', to: 'languages#show', as: 'language'
+  #
+  scope ':language', as: 'language' do
+    resources :links
+  end
+
+  root to: "root#home"
 end

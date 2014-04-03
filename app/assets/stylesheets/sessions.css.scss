@@ -1,0 +1,27 @@
+.login-form {
+  .modal-body {
+    text-align: center;
+    padding: 25px;
+  }
+
+  .login-with-github {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    padding: 20px;
+    background: url('/assets/github-round.png');
+    border: 1px solid #E8E8E8;
+    margin: 10px auto;
+
+    &:hover {
+      border: 1px solid #CFCFCF;
+      opacity: 0.9;
+    }
+  }
+
+  .explanation {
+    font-size: 10px;
+    text-align: left;
+    margin-top: 30px;
+  }
+}

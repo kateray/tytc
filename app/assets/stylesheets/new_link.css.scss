@@ -5,13 +5,50 @@
   display: inline-block;
 }
 
+.new-link-form {
+  font-size: 40px;
+
+
+
+
+
+  input, textarea {
+    border: none;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  input {
+    border-bottom: 1px solid black;
+
+    &:focus {
+      border-bottom: 1px solid $teal;
+    }
+  }
+
+  .submit-link {
+    float: right;
+    background: $green;
+    padding: 10px;
+    border: 0px;
+  }
+}
+
+
+
+
 .new-link-container {
   background: $light-gray;
   position: relative;
 
+  form {
+    margin-top: 20px;
+  }
   .header {
     font-size: 3em;
-    background: #72ff1f;
+    background: $teal;
     padding: 10px 0px;
 
     .header-title {
@@ -23,14 +60,24 @@
     font-size: 40px;
   }
 
+  input, textarea {
+    background-color: transparent;
+    &:focus {
+      outline: none;
+    }
+  }
+
   input {
-    background: $light-gray;
     border: none;
     border-bottom: 1px solid black;
+
+    &:focus {
+      border-bottom: 1px solid $teal;
+    }
   }
 
   textarea {
-    background: $light-gray;
+    border: none;
     width: 100%;
   }
 
@@ -40,7 +87,7 @@
 
   .submit-link {
     float: right;
-    background: yellow;
+    background: $green;
     font-size: 35px;
     padding: 10px;
   }

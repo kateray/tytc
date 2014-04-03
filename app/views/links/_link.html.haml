@@ -1,4 +1,4 @@
-%li.link{"data-id" => link.id}
+%li.link{"data-id" => link.id, "data-url" => language_link_path(link.tag.language, link), class: ('new-link' if flash[:new_link_id] == link.id) }
   .link-star
     *
   .link-container
@@ -9,9 +9,15 @@
         %span.level-tag
           = link.level_name
         %span.votes-count
-          %i.vote-button.fa.fa-check
           %span.user-votes
             = render link.votes
+          - if current_user
+            - if current_user.voted_on?(link.id)
+              %i.checkmark.voted.fa.fa-check.fa-2x
+            - else
+              %i.checkmark.vote-button.fa.fa-check.fa-2x
+          - else
+            %i.checkmark.fa.fa-check.fa-2x{"data-toggle"=>"modal", "data-target"=>".login-form"}
 
     .link-expanded.collapse
       .link-description
@@ -19,8 +25,5 @@
         %span.link-author
           = "- "
           = link_to "@#{link.user.username}", "http://github.com/#{link.user.username}", :target=>"_blank"
-      -# .link-author
-      -#   submitted by
-      -#   = link_to link.user.username, "http://github.com/#{link.user.username}", :target=>"_blank"
       = link_to "Start Tutorial ->", link.url, :target=>"_blank", :class=> "link-url"
       %div{:style=>"clear:both"}

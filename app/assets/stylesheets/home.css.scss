@@ -5,11 +5,36 @@ body {
   padding-top: 75px;
 }
 
-.languages.show .links-container {
+a {
+  color: $dark-teal;
+}
+
+.show .links-container {
   padding-top: 120px;
 }
 
+.navbar-right {
+  line-height: 30px;
+  padding: 30px 0px;
+}
+
+.modal-header {
+  background: $teal;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.modal-content {
+  border-radius: 0px;
+}
+
+.modal-body {
+  padding: 40px;
+  font-size: 20px;
+}
+
 .navbar {
+  background: $teal;
   border-bottom: 0px;
 }
 .navbar-brand {
@@ -17,6 +42,13 @@ body {
   color: black;
   font-weight: bold;
   font-size: 30px;
+}
+
+.login-link {
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 img.avatar {
@@ -45,7 +77,6 @@ img.avatar {
   position: relative;
   z-index: 10;
 
-
   &.sticky {
     position: fixed;
     left: 0px;
@@ -55,15 +86,15 @@ img.avatar {
   }
 }
 
-.languages .heading {
+.show .heading {
   position: fixed;
   left: 0px;
   width: 100%;
-  z-index: 10;
 }
+
 .footer {
-  background: gray;
-  height: 300px;
+  background: $dark-gray;
+  height: 500px;
 }
 
 ul {
@@ -79,4 +110,5 @@ ul {
   font-size: 20px;
   float: right;
   padding-top: 50px;
+  cursor: pointer;
 }

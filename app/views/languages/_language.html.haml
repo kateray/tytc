@@ -4,12 +4,19 @@
       .container
         = link_to language.name, language_path(language)
         - if params[:action] == "show"
-          .add-link-button
-            %a{:href=>"#add"}
+          - if current_user
+            .add-link-button{"data-toggle"=>"modal", "data-target"=>".new-link-form"}
+              + add link
+          - else
+            .add-link-button{"data-toggle"=>"modal", "data-target"=>".login-form"}
               + add link
   .container.links-container
     %ul.col-md-12
       - if params[:action] == "index"
         = render language.links.first(3)
+        %li.link
+          .link-container
+            .link-head
+              = "See all #{language.name} tutorials"
       - else
         = render language.links
