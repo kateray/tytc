@@ -46,6 +46,18 @@
     }
   }
 
+  .btn-primary {
+    background-color: inherit;
+    border: none;
+    color: $dark-gray;
+    font-size: 40px;
+
+    &.active {
+      color: $teal;
+      box-shadow: none;
+    }
+  }
+
   .submit-link {
     float: right;
     background: $green;
