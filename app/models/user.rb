@@ -32,7 +32,7 @@ class User < ActiveRecord::Base
   has_many :votes, inverse_of: :user
 
   validates :username, presence: true, uniqueness: { case_sensitive: false }
-  validates :email, presence: true, uniqueness: { case_sensitive: false }
+  # validates :email, presence: true, uniqueness: { case_sensitive: false }
   validates :github_id, presence: true, uniqueness: true
 
   def self.github_find_or_create(auth)
