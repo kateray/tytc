@@ -9,7 +9,7 @@
         - if !link.free
           %span.free-tag
             $$
-        .votes-count
+        %span.votes-count
           %span.user-votes
             - if current_user
               - if current_user.voted_on?(link.id)
