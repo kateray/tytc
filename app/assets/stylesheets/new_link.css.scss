@@ -10,7 +10,25 @@
 
 
 
+  textarea {
+    width: 100%;
+    background-image: -webkit-linear-gradient(left, white 10px, transparent 10px), -webkit-linear-gradient(right, white 10px, transparent 10px), -webkit-linear-gradient(white 40px, #000 40px, #000 41px, white 41px);
+    background-image: -moz-linear-gradient(left, white 10px, transparent 10px), -moz-linear-gradient(right, white 10px, transparent 10px), -moz-linear-gradient(white 40px, #000 40px, #000 41px, white 41px);
+    background-image: -ms-linear-gradient(left, white 10px, transparent 10px), -ms-linear-gradient(right, white 10px, transparent 10px), -ms-linear-gradient(white 40px, #000 40px, #000 41px, white 41px);
+    background-image: -o-linear-gradient(left, white 10px, transparent 10px), -o-linear-gradient(right, white 10px, transparent 10px), -o-linear-gradient(white 40px, #000 40px, #000 41px, white 41px);
+    background-image: linear-gradient(left, white 10px, transparent 10px), linear-gradient(right, white 10px, transparent 10px), linear-gradient(white 40px, #000 40px, #000 41px, white 41px);
+    background-size: 100% 100%, 100% 100%, 100% 41px;
+    line-height: 41px;
+    padding: 3px 20px;
 
+    &:focus {
+      background-image: -webkit-linear-gradient(left, white 10px, transparent 10px), -webkit-linear-gradient(right, white 10px, transparent 10px), -webkit-linear-gradient(white 40px, $teal 40px, $teal 41px, white 41px);
+      background-image: -moz-linear-gradient(left, white 10px, transparent 10px), -moz-linear-gradient(right, white 10px, transparent 10px), -moz-linear-gradient(white 40px, $teal 40px, $teal 41px, white 41px);
+      background-image: -ms-linear-gradient(left, white 10px, transparent 10px), -ms-linear-gradient(right, white 10px, transparent 10px), -ms-linear-gradient(white 40px, $teal 40px, $teal 41px, white 41px);
+      background-image: -o-linear-gradient(left, white 10px, transparent 10px), -o-linear-gradient(right, white 10px, transparent 10px), -o-linear-gradient(white 40px, $teal 40px, $teal 41px, white 41px);
+      background-image: linear-gradient(left, white 10px, transparent 10px), linear-gradient(right, white 10px, transparent 10px), linear-gradient(white 40px, $teal 40px, $teal 41px, white 41px);
+    }
+  }
 
   input, textarea {
     border: none;
