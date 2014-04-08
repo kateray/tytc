@@ -11,7 +11,7 @@
 
 class Language < ActiveRecord::Base
   has_many :tags, inverse_of: :language
-  has_many :links, through: :tags, order: 'votes_count'
+  has_many :links, through: :tags, order: 'votes_count DESC'
 
   validates :name, presence: true, uniqueness: { case_sensitive: false }
 
