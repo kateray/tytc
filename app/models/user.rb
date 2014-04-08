@@ -32,7 +32,6 @@ class User < ActiveRecord::Base
   has_many :votes, inverse_of: :user
 
   validates :username, presence: true, uniqueness: { case_sensitive: false }
-  # validates :email, presence: true, uniqueness: { case_sensitive: false }
   validates :github_id, presence: true, uniqueness: true
 
   def self.github_find_or_create(auth)
@@ -54,6 +53,15 @@ class User < ActiveRecord::Base
 
   def voted_on?(link_id)
     votes.where(link_id: link_id).any?
+  end
+
+
+  def email_required?
+    false
+  end
+
+  def email_changed?
+    false
   end
 
 end
