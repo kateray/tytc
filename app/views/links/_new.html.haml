@@ -18,7 +18,7 @@
             .row
               = f.text_area :description
           .row
-            What level?
+            = f.label :level, "Who's it for?"
             .btn-group{"data-toggle"=>"buttons"}
               .btn.btn-primary
                 = f.radio_button :level, 1
@@ -30,7 +30,7 @@
                 = f.radio_button :level, 3
                 Advanced
           .row
-            Is it free?
+            = f.label :free, "Is it free?"
             .btn-group{"data-toggle"=>"buttons"}
               .btn.btn-primary
                 = f.radio_button :free, true
