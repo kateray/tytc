@@ -1,14 +1,14 @@
-.modal.fade.new-link-form{"aria-hidden" => "true", "aria-labelledby" => "myLargeModalLabel", role: "dialog", tabindex: "-1"}
+.modal.new-link-form{"aria-hidden" => "true", "aria-labelledby" => "myLargeModalLabel", role: "dialog", tabindex: "-1"}
   .modal-dialog.modal-lg
     .modal-content
       .modal-header
         Add a new link
         %button{type:"button", class:"close", "data-dismiss"=>"modal", "aria-hidden"=>"true"} &times;
       .modal-body.container-fluid
-        = form_for [@language, Link.new], html: {class: "form-horizontal", role: "form"} do |f|
+        = form_for [@language, @newLink], html: {class: "form-horizontal", role: "form"} do |f|
           = f.hidden_field :language, value: @language.id
           .form-group
-            = f.label :first_name, "What do you make?"
+            = f.label :title, "What do you make?"
             = f.text_field :title, autocomplete: "off"
           .form-group
             = f.label :url, "URL"

@@ -30,6 +30,7 @@ class Link < ActiveRecord::Base
   validates :title, presence: true, uniqueness: { case_sensitive: false }
   validates :url, presence: true, uniqueness: { case_sensitive: false }
   validates :description, presence: true
+  validates :free, inclusion: [true, false]
   validates :level, presence: true
   validates :user, presence: true
 
