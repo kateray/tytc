@@ -47,13 +47,13 @@
 
             -# = link_to '#about' do
             -#   %i.fa.fa-question
-            |
-            - if current_user
-              = image_tag(current_user.avatar_url, class: "avatar")
-              = link_to destroy_user_session_path, method: :delete do
-                %i.fa.fa-sign-out
-            - else
-              %img{:src => asset_path("github-round.png"), "data-toggle"=>"modal", "data-target"=>".login-form"}
+            -# |
+            -# - if current_user
+            -#   = image_tag(current_user.avatar_url, class: "avatar")
+            -#   = link_to destroy_user_session_path, method: :delete do
+            -#     %i.fa.fa-sign-out
+            -# - else
+            -#   %img{:src => asset_path("github-round.png"), "data-toggle"=>"modal", "data-target"=>".login-form"}
 
 
 

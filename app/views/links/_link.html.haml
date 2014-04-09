@@ -2,13 +2,15 @@
   .link-container
     .link-head
       %span.link-title
+        - if !link.free
+          $
         = link.title
       %span.link-metadata
         %span.level-tag{class: link.level_name}
           = link.level_name
-        - if !link.free
-          %span.free-tag
-            $$
+        -# - if !link.free
+        -#   %span.free-tag
+        -#     $$
         %span.votes-count
           %span.user-votes
             - if current_user

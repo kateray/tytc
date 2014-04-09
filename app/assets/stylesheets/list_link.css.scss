@@ -12,7 +12,10 @@ li {
 
 .link-container {
   padding-left: 15px;
-  padding-right: 15px;
+  padding-right: 45px;
+  @media (min-width: $screen-md-min) {
+    padding-right: 0px;
+  }
   // padding-left: 40px;
 }
 
