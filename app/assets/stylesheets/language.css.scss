@@ -1,0 +1,28 @@
+.heading {
+  background: $teal;
+  font-size: 70px;
+  padding: 10px;
+  font-weight: bold;
+  color: black;
+  position: relative;
+  z-index: 10;
+
+
+  &.sticky {
+    position: fixed;
+    left: 0px;
+    visibility: hidden;
+    width: 100%;
+    z-index: 9;
+  }
+
+  a {
+    color: #000;
+  }
+}
+
+.show .heading {
+  position: fixed;
+  left: 0px;
+  width: 100%;
+}
