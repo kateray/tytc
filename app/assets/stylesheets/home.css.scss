@@ -1,6 +1,9 @@
 
 body {
   padding-top: $navbar-height;
+  @media (min-width: $screen-md-min) {
+    padding-top: 75px;
+  }
 }
 
 a {

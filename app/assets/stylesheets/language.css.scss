@@ -22,10 +22,30 @@
   a {
     color: #000;
   }
+
+  .container {
+    padding: 0px;
+    @media (min-width: $screen-md-min) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
 }
 
 .show .heading {
   position: fixed;
   left: 0px;
   width: 100%;
+}
+
+.links-container {
+  padding: 0px;
+  @media (min-width: $screen-md-min) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.links-ul {
+  padding: 0px;
 }

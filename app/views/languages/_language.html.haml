@@ -10,7 +10,7 @@
           .add-link-button{"data-toggle"=>"modal", "data-target"=>".login-form"}
             + add link
   .container.links-container
-    %ul.col-md-12
+    %ul.col-md-12.links-ul
       - if params[:action] == "home"
         = render language.links.first(3)
         %li.link
