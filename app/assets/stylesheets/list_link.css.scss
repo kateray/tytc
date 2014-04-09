@@ -84,12 +84,14 @@ li {
   }
 
   .link-description {
-    font-size: .5em;
+    font-size: .7em;
     line-height: 1.5;
     margin-bottom: 20px;
     font-style: italic;
 
-
+    @media (min-width: $screen-md-min) {
+      font-size: .5em;
+    }
     .link-author {
       font-style: normal;
     }
