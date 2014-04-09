@@ -47,6 +47,13 @@
   }
 }
 
+.show .links-container {
+    padding-top: 48px;
+  @media (min-width: $screen-md-min) {
+    padding-top: 78px;
+  }
+}
+
 .links-ul {
   padding: 0px;
 }
