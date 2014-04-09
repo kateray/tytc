@@ -76,7 +76,11 @@ a {
 }
 
 img.avatar {
-  width: 25px;
+  width: 20px;
+
+  @media (min-width: $screen-md-min) {
+    width: 25px;
+  }
 }
 
 .front-splash {

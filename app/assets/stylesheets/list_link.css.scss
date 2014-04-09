@@ -75,11 +75,11 @@ li {
     color: $dark-gray;
 
     &:hover {
-      color: $dark-teal;
+      color: $teal;
     }
 
     &.voted {
-      color: $dark-teal;
+      color: $teal;
     }
   }
 
@@ -108,9 +108,9 @@ li {
 
   .level-tag, .free-tag {
     margin: 5px;
-    font-size: .5em;
+    font-size: .4em;
     text-align: center;
-    padding: 5px;
+    padding: 5px 10px;
     position: relative;
     bottom: 5px;
     font-weight: bold;
@@ -132,11 +132,14 @@ li {
     }
   }
 
+  .link-metadata {
+    @media (min-width: $screen-md-min) {
+      display: inline;
+    }
+  }
 
   .user-votes img {
     position: relative;
-    bottom: 5px;
-    margin: 5px;
   }
 
   .votes-count {

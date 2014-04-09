@@ -2,13 +2,14 @@
   .heading
     .container
       = link_to language.name, language_path(language)
-      - if params[:action] != "home"
-        - if current_user
-          .add-link-button{"data-toggle"=>"modal", "data-target"=>".new-link-form"}
-            + add link
-        - else
-          .add-link-button{"data-toggle"=>"modal", "data-target"=>".login-form"}
-            + add link
+      .hidden-xs
+        - if params[:action] != "home"
+          - if current_user
+            .add-link-button{"data-toggle"=>"modal", "data-target"=>".new-link-form"}
+              + add link
+          - else
+            .add-link-button{"data-toggle"=>"modal", "data-target"=>".login-form"}
+              + add link
   .container.links-container
     %ul.col-md-12.links-ul
       - if params[:action] == "home"
