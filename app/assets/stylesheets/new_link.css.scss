@@ -8,7 +8,9 @@
 
 .new-link-form {
   font-size: 0.5em;
-
+  @media (min-width: $screen-md-min) {
+    font-size: 1em;
+  }
 
 
   textarea {
