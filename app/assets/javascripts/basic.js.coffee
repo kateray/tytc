@@ -1,5 +1,6 @@
 stickyHeaders = ->
   $('.language-container').each ->
+    console.log 'hrm'
     $el = $(this)
     fromTop = $el.offset().top
     scrollTop = $(window).scrollTop() + $('.navbar').height()
@@ -54,22 +55,22 @@ ready = ->
 
   $('.vote-button').click(vote)
 
-  $('a').click (e) ->
-    if !@hash? || window.location.pathname != @pathname
-      return
-
-    targetOffset = $(@hash).offset().top
-
-    $('body, html')
-      .stop()
-      .animate(
-        { scrollTop: targetOffset },
-        400,
-        =>
-          window.history.replaceState(null, null, this.href)
-      )
-
-    return false
+  # $('a').click (e) ->
+  #   if !@hash? || window.location.pathname != @pathname
+  #     return
+  #
+  #   targetOffset = $(@hash).offset().top
+  #
+  #   $('body, html')
+  #     .stop()
+  #     .animate(
+  #       { scrollTop: targetOffset },
+  #       400,
+  #       =>
+  #         window.history.replaceState(null, null, this.href)
+  #     )
+  #
+  #   return false
 
   $('.new-link').delay(2500).css('background-color', 'inherit')
 

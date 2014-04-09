@@ -7,7 +7,7 @@
 }
 
 .new-link-form {
-  font-size: 2em;
+  font-size: 0.5em;
 
 
 
@@ -32,11 +32,11 @@
   }
 
   input, textarea {
-    font-size: 1.5em;
+    font-size: 0.7em;
     border: none;
 
     &:focus {
-      outline: none;
+      outline: none !important;
     }
   }
 
@@ -52,7 +52,7 @@
     background-color: inherit;
     border: none;
     color: $dark-gray;
-    font-size: 1.5em;
+    font-size: 0.7em;
 
     &.active {
       color: $teal;

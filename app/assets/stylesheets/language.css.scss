@@ -24,6 +24,7 @@
   }
 
   .container {
+    position: relative;
     padding: 0px;
     @media (min-width: $screen-md-min) {
       padding-left: 15px;
@@ -48,4 +49,12 @@
 
 .links-ul {
   padding: 0px;
+}
+
+.add-link-button {
+  font-size: 0.5em;
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+  cursor: pointer;
 }
