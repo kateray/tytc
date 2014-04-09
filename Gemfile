@@ -30,6 +30,7 @@ group :development do
   gem 'annotate'
 end
 
+gem 'newrelic_rpm'
 gem 'devise'
 gem 'figaro'
 gem 'omniauth-github'
