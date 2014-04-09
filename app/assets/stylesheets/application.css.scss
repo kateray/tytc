@@ -21,12 +21,11 @@ $red: #FF0A0A;
 
 $light-yellow: #fffd92;
 
-//bootstrap variables
-$navbar-height: 75px;
-
 $container-large-desktop: 960px;
 
 $navbar-default-link-color: black;
+
+$font-size-base: 20px;
 
 @import "bootstrap";
 @import "home";

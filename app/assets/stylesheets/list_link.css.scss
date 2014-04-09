@@ -23,7 +23,10 @@ li {
   }
 
   position: relative;
-  font-size: 3em;
+
+  @media (min-width: $screen-md-min) {
+    font-size: 2em;
+  }
 
   padding: 0px;
   border-bottom: 1px solid silver;
@@ -53,7 +56,7 @@ li {
   }
   .link-metadata {
     line-height: 40px;
-    font-size: 20px;
+    font-size: 1em;
   }
 
   &:hover {
@@ -73,7 +76,7 @@ li {
   }
 
   .link-description {
-    font-size: 20px;
+    font-size: .5em;
     line-height: 1.5;
     margin-bottom: 20px;
     font-style: italic;
@@ -87,7 +90,7 @@ li {
   .link-url {
     float: right;
     background: $green;
-    font-size: 35px;
+    font-size: 1em;
     padding: 10px;
 
     &:hover {
@@ -97,7 +100,7 @@ li {
 
   .level-tag, .free-tag {
     margin: 5px;
-    font-size: 15px;
+    font-size: .75em;
     text-align: center;
     padding: 5px;
     position: relative;

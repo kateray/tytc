@@ -1,12 +1,15 @@
 .heading {
   background: $teal;
-  font-size: 70px;
+
   padding: 10px;
   font-weight: bold;
   color: black;
   position: relative;
   z-index: 10;
 
+  @media (min-width: $screen-md-min) {
+    font-size: 3em;
+  }
 
   &.sticky {
     position: fixed;

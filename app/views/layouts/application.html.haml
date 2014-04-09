@@ -16,24 +16,47 @@
     -# - if flash[:error]
     -#   = content_tag :div, flash[:error], :class => "alert alert-danger"
 
-    %nav.navbar.navbar-default.navbar-fixed-top{:role=>"navigation"}
-      .container
-        .col-md-12
-          .navbar-header
-            %a.navbar-brand{:href => "/"}
-              %img{:src => asset_path("code-logo.png")}
-              teach yourself to code
+    %span.hidden-xs
+      %nav.navbar.navbar-default.navbar-fixed-top{:role=>"navigation"}
+        .container
+          .col-md-12
+            .navbar-header
+              %a.navbar-brand{:href => "/"}
+                %img{:src => asset_path("code-logo.png")}
+                teach yourself to code
 
+            .nav.navbar-nav.navbar-right
+              = link_to('about', '#about')
+              |
+              - if current_user
+                = image_tag(current_user.avatar_url, class: "avatar")
+                = link_to('sign out', destroy_user_session_path, :method => :delete)
+              - else
+                %span.login-link{"data-toggle"=>"modal", "data-target"=>".login-form"}
+                  sign in
 
-          .nav.navbar-nav.navbar-right
+    %span.visible-xs
+      %nav.navbar.navbar-default.navbar-fixed-top{:role=>"navigation"}
+        .navbar-header
+          %a.navbar-brand{:href => "/"}
+            %img.hidden-xs{:src => asset_path("code-logo.png")}
+            teach yourself to code
+
+          .mobile-right
             = link_to('about', '#about')
+
+            -# = link_to '#about' do
+            -#   %i.fa.fa-question
             |
             - if current_user
               = image_tag(current_user.avatar_url, class: "avatar")
-              = link_to('sign out', destroy_user_session_path, :method => :delete)
+              = link_to destroy_user_session_path, method: :delete do
+                %i.fa.fa-sign-out
             - else
-              %span.login-link{"data-toggle"=>"modal", "data-target"=>".login-form"}
-                sign in
+              %img{:src => asset_path("github-round.png"), "data-toggle"=>"modal", "data-target"=>".login-form"}
+
+
+
 
     = yield
     = render "/shared/login"

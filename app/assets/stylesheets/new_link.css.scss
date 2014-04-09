@@ -7,7 +7,7 @@
 }
 
 .new-link-form {
-  font-size: 40px;
+  font-size: 2em;
 
 
 
@@ -32,7 +32,7 @@
   }
 
   input, textarea {
-    font-size: 30px;
+    font-size: 1.5em;
     border: none;
 
     &:focus {
@@ -52,7 +52,7 @@
     background-color: inherit;
     border: none;
     color: $dark-gray;
-    font-size: 30px;
+    font-size: 1.5em;
 
     &.active {
       color: $teal;
@@ -67,61 +67,3 @@
     border: 0px;
   }
 }
-
-
-
-
-// .new-link-container {
-//   background: $light-gray;
-//   position: relative;
-//
-//   form {
-//     margin-top: 20px;
-//   }
-//   .header {
-//     font-size: 3em;
-//     background: $teal;
-//     padding: 10px 0px;
-//
-//     .header-title {
-//       padding: 30px 0px 30px 43px;
-//     }
-//   }
-//
-//   .link-container {
-//     font-size: 40px;
-//   }
-//
-//   input, textarea {
-//     background-color: transparent;
-//     font-size: 30px;
-//     &:focus {
-//       outline: none;
-//     }
-//   }
-//
-//   input {
-//     border: none;
-//     border-bottom: 1px solid black;
-//
-//     &:focus {
-//       border-bottom: 1px solid $teal;
-//     }
-//   }
-//
-//   textarea {
-//     border: none;
-//     width: 100%;
-//   }
-//
-//   .row {
-//     margin: 25px 0px;
-//   }
-//
-//   .submit-link {
-//     float: right;
-//     background: $green;
-//     font-size: 35px;
-//     padding: 10px;
-//   }
-// }

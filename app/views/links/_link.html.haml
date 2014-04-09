@@ -13,11 +13,11 @@
           %span.user-votes
             - if current_user
               - if current_user.voted_on?(link.id)
-                %i.checkmark.voted.fa.fa-check.fa-2x
+                %i.checkmark.voted.fa.fa-check
               - else
-                %i.checkmark.vote-button.fa.fa-check.fa-2x
+                %i.checkmark.vote-button.fa.fa-check
             - else
-              %i.checkmark.fa.fa-check.fa-2x{"data-toggle"=>"modal", "data-target"=>".login-form"}
+              %i.checkmark.fa.fa-check{"data-toggle"=>"modal", "data-target"=>".login-form"}
             = render link.votes
 
     .link-expanded.collapse
