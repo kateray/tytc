@@ -1,43 +1,16 @@
 
 body {
   padding-top: $navbar-height;
-  @media (min-width: $screen-md-min) {
-    padding-top: 75px;
-  }
 }
 
 a {
-  color: $dark-teal;
+  color: #000;
 }
 
 
 
-.navbar-right {
-  line-height: 30px;
-  @media (min-width: $screen-md-min) {
-    padding: 30px 0px;
-  }
-}
 
-.modal-header {
-  background: $teal;
-  font-weight: bold;
-  font-size: 2em;
-}
 
-.modal-content {
-  border-radius: 0px;
-}
-
-.modal-body {
-  padding: 40px;
-  font-size: 2em;
-}
-
-.navbar {
-  background: $teal;
-  border-bottom: 0px;
-}
 
 .mobile-right {
   font-size: 0.7em;
@@ -50,20 +23,17 @@ a {
 .navbar-brand {
   font-size: 0.7em;
   padding: 10px;
-  @media (min-width: $screen-md-min) {
+  @media (min-width: $screen-sm-min) {
     font-size: 1.5em;
     padding: 30px 0px;
   }
-
-
-
   color: black;
   font-weight: bold;
 }
 
 .navbar-right {
 
-  @media (min-width: $screen-md-min) {
+  @media (min-width: $screen-sm-min) {
     font-size: 0.7em;
   }
 }
@@ -78,7 +48,7 @@ a {
 img.avatar {
   width: 20px;
 
-  @media (min-width: $screen-md-min) {
+  @media (min-width: $screen-sm-min) {
     width: 25px;
   }
 }
@@ -87,12 +57,13 @@ img.avatar {
   padding: 60px 0px;
   background-color: $light-gray;
 
-  @media (min-width: $screen-md-min) {
+  @media (min-width: $screen-sm-min) {
     font-size: 2em;
   }
 
   .message {
     font-weight: bold;
+    text-align: center;
   }
 }
 
@@ -100,7 +71,20 @@ img.avatar {
 
 .footer {
   background: $dark-gray;
-  height: 500px;
+  color: white;
+  padding: 60px;
+  a {
+    color: white;
+    text-decoration: underline;
+  }
+  #signoff {
+    float: right;
+  }
+
+  img {
+    float: right;
+    margin-top: 30px;
+  }
 }
 
 ul {

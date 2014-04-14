@@ -24,6 +24,9 @@ $light-yellow: #fffd92;
 $container-large-desktop: 960px;
 
 $navbar-default-link-color: black;
+$navbar-default-bg: $teal;
+
+$navbar-height: 120px;
 
 $font-size-base: 20px;
 
@@ -33,3 +36,5 @@ $font-size-base: 20px;
 @import "list_link";
 @import "new_link";
 @import "sessions";
+@import "modal";
+@import "nav";

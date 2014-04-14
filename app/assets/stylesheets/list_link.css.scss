@@ -13,7 +13,7 @@ li {
 .link-container {
   padding-left: 15px;
   padding-right: 15px;
-  @media (min-width: $screen-md-min) {
+  @media (min-width: $screen-sm-min) {
     padding-right: 0px;
   }
   // padding-left: 40px;
@@ -21,6 +21,9 @@ li {
 
 
 .link {
+  i {
+    font-size: 0.8em;
+  }
   a:hover {
     color: black;
     text-decoration: none;
@@ -28,7 +31,7 @@ li {
 
   position: relative;
 
-  @media (min-width: $screen-md-min) {
+  @media (min-width: $screen-sm-min) {
     font-size: 2em;
   }
 
@@ -46,17 +49,14 @@ li {
   }
   .link-head {
     padding: 0.5em 0;
-    @media (min-width: $screen-md-min) {
+    @media (min-width: $screen-sm-min) {
       padding: 1em 0;
     }
     // padding: 30px 0px;
 
-    &.see-all a {
+    &.see-all {
       color: $dark-gray;
 
-      &:hover {
-        text-decoration: underline;
-      }
     }
   }
   .link-title {
@@ -89,7 +89,7 @@ li {
     margin-bottom: 20px;
     font-style: italic;
 
-    @media (min-width: $screen-md-min) {
+    @media (min-width: $screen-sm-min) {
       font-size: .5em;
     }
     .link-author {
@@ -135,7 +135,7 @@ li {
   }
 
   .link-metadata {
-    @media (min-width: $screen-md-min) {
+    @media (min-width: $screen-sm-min) {
       display: inline;
     }
   }

@@ -1,20 +1,23 @@
 stickyHeaders = ->
-  $('.language-container').each ->
-    console.log 'hrm'
+  $('.block-container').each ->
     $el = $(this)
     fromTop = $el.offset().top
-    scrollTop = $(window).scrollTop() + $('.navbar').height()
-    $header = $(".heading", this)
+    scrollTop = $(window).scrollTop()
+    $header = $(".language-heading-name", this)
     $floatingHeader = $(".sticky", this)
 
-    if (scrollTop > fromTop) and (scrollTop < fromTop + $el.height())
+    if ($el.hasClass('special-footer')) and (scrollTop > fromTop - 150) and (scrollTop < fromTop + $el.height())
+      console.log 'hey'
+      $('.sticky').css visibility: "hidden"
       $floatingHeader.css visibility: "visible"
-      $header.css("z-index", 8)
-
     else
-      $floatingHeader.css visibility: "hidden"
-      $header.css("z-index", 10)
+      if (scrollTop > fromTop) and (scrollTop < fromTop + $el.height())
+        $floatingHeader.css visibility: "visible"
+        $header.css("z-index", 5)
 
+      else
+        $floatingHeader.css visibility: "hidden"
+        $header.css("z-index", 10)
 
 vote = (e) ->
   e.stopPropagation()
@@ -45,32 +48,25 @@ ready = ->
       $el.find('.link-expanded').addClass('in')
       $('body').scrollTop($el.position().top)
 
-  if $('body').hasClass('home')
-    $(".language-container").each ->
-      $clonedHeaderRow = $(".heading", this)
-      $clonedHeaderRow.before($clonedHeaderRow.clone()).addClass("sticky").css('top', $('.navbar').height())
-      return
-
-    $(window).scroll(stickyHeaders)
+  $(window).scroll(stickyHeaders)
 
   $('.vote-button').click(vote)
 
-  # $('a').click (e) ->
-  #   if !@hash? || window.location.pathname != @pathname
-  #     return
-  #
-  #   targetOffset = $(@hash).offset().top
-  #
-  #   $('body, html')
-  #     .stop()
-  #     .animate(
-  #       { scrollTop: targetOffset },
-  #       400,
-  #       =>
-  #         window.history.replaceState(null, null, this.href)
-  #     )
-  #
-  #   return false
+  $('a').click (e) ->
+    if !@hash? || window.location.pathname != @pathname
+      return
+
+    targetOffset = $(@hash).offset().top
+
+    $('body, html')
+      .stop()
+      .animate(
+        { scrollTop: targetOffset },
+        400,
+        =>
+          window.history.replaceState(null, null, this.href)
+      )
+    return false
 
   $('.new-link').delay(2500).css('background-color', 'inherit')
 

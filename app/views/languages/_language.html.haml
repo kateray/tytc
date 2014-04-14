@@ -1,22 +1,22 @@
-.language-container{:class => "#{language.name}"}
-  .heading
-    .container
-      = link_to language.name, language_path(language)
-      .hidden-xs
-        - if params[:action] != "home"
-          - if current_user
-            .add-link-button{"data-toggle"=>"modal", "data-target"=>".new-link-form"}
-              + add link
-          - else
-            .add-link-button{"data-toggle"=>"modal", "data-target"=>".login-form"}
-              + add link
+.block-container{:class => "#{language.name}"}
+  - if params[:action] == "home"
+    .heading
+      .sticky
+        .container
+          .col-sm-offset-5
+            = link_to language.name, language_path(language)
+      .language-heading-name
+        .container
+          .col-sm-offset-5
+            = link_to language.name, language_path(language)
   .container.links-container
-    %ul.col-md-12.links-ul
+    %ul.col-sm-12.links-ul
       - if params[:action] == "home"
         = render language.links.first(3)
-        %li.link
-          .link-container
-            .link-head.see-all
-              = link_to "See all #{language.name} tutorials", language_path(language)
+        = link_to language_path(language) do
+          %li.link
+            .link-container
+              .link-head.see-all
+                = "See all #{language.name} tutorials"
       - else
         = render language.links
