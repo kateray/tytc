@@ -11,6 +11,13 @@
     font-size: 0.8em;
   }
 
+  img {
+    margin-left: -80px;
+    @media (min-width: $screen-md-min) {
+      margin-left: 0px;
+    }
+  }
+
   a:hover {
     text-decoration: none;
   }
@@ -73,7 +80,7 @@
   width: 100%;
   z-index: 8;
   font-size: 1.5em;
-
+  font-weight: bold;
   color: black;
 
   .sticky-language {
