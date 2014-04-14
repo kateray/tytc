@@ -3,7 +3,7 @@
     .heading
       .sticky
         .container
-          .col-sm-offset-5
+          .col-sm-offset-5.sticky-language
             = link_to language.name, language_path(language)
       .language-heading-name
         .container
@@ -13,10 +13,11 @@
     %ul.col-sm-12.links-ul
       - if params[:action] == "home"
         = render language.links.first(3)
-        = link_to language_path(language) do
-          %li.link
-            .link-container
-              .link-head.see-all
-                = "See all #{language.name} tutorials"
+        .see-all
+          = link_to language_path(language) do
+            %li.link
+              .link-container
+                .link-head
+                  = "See all #{language.name} tutorials"
       - else
         = render language.links

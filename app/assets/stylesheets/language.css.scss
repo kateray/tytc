@@ -3,8 +3,8 @@
   font-weight: bold;
   color: black;
 
-  a {
-    color: #000;
+  a:hover {
+    text-decoration: none;
   }
 
   .container {
@@ -15,12 +15,6 @@
       padding-right: 15px;
     }
   }
-}
-
-.show .heading {
-  position: fixed;
-  left: 0px;
-  width: 100%;
 }
 
 .links-container {

@@ -7,9 +7,9 @@ stickyHeaders = ->
     $floatingHeader = $(".sticky", this)
 
     if ($el.hasClass('special-footer')) and (scrollTop > fromTop - 150) and (scrollTop < fromTop + $el.height())
-      console.log 'hey'
-      $('.sticky').css visibility: "hidden"
-      $floatingHeader.css visibility: "visible"
+      if $('body').hasClass('home')
+        $('.sticky').css visibility: "hidden"
+        $floatingHeader.css visibility: "visible"
     else
       if (scrollTop > fromTop) and (scrollTop < fromTop + $el.height())
         $floatingHeader.css visibility: "visible"

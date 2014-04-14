@@ -6,6 +6,10 @@
   i {
     font-size: 0.8em;
   }
+
+  a:hover {
+    text-decoration: none;
+  }
 }
 
 .navbar-right {
@@ -50,7 +54,11 @@
   padding: 20px 0px;
   visibility: hidden;
   width: 100%;
-  z-index: 9;
+  z-index: 8;
+
+  .sticky-language {
+    height: 0px;
+  }
 }
 
 .special-footer {
