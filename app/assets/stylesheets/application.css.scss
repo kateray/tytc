@@ -7,7 +7,7 @@ $dark-gray: #8A8A8A;
 
 $teal: #67BCE6;
 
-$dark-teal: #1C4145;
+$dark-teal: #5BA7CC;
 
 $green: #51d900;
 
@@ -31,6 +31,30 @@ $navbar-height: 120px;
 $font-size-base: 20px;
 
 @import "bootstrap";
+
+.dropdown-menu {
+  z-index: 10;
+  border-radius: 0px;
+  background-color: $teal;
+  padding: 0px;
+  border: none;
+  box-shadow: none;
+
+  li a {
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 3px 10px;
+
+    &:hover {
+      background: $dark-teal;
+    }
+  }
+}
+
+.dropdown-toggle {
+  cursor: pointer;
+}
+
 @import "home";
 @import "language";
 @import "list_link";
