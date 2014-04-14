@@ -21,20 +21,20 @@
       %nav.navbar.navbar-default.navbar-fixed-top{:role=>"navigation"}
         .container
           .col-sm-12
-            .navbar-header
+            .navbar-header.col-sm-5
               .navbar-brand
                 = link_to root_path do
                   %img{:src => asset_path("code-logo.png")}
                   teach yourself to code
-                .language-nav.dropdown
-                  %btn.dropdown-toggle{type: "button", id: "language-dropdown", "data-toggle"=> "dropdown"}
-                    .language-name
-                      = yield :language_name
-                    %i.fa.fa-sort
-                  %ul.dropdown-menu{role: "menu", "aria-labelledby"=>"language-dropdown"}
-                    - Language.all.each do |l|
-                      %li
-                        = link_to l.name, language_path(l), html_options: {role: "menuitem", tabindex: "-1"}
+            .language-nav.dropdown.col-sm-5
+              %btn.dropdown-toggle{type: "button", id: "language-dropdown", "data-toggle"=> "dropdown"}
+                %input.language-name
+                  = yield :language_name
+                %i.fa.fa-sort
+              %ul.dropdown-menu{role: "menu", "aria-labelledby"=>"language-dropdown"}
+                - Language.all.each do |l|
+                  %li
+                    = link_to l.name, language_path(l), html_options: {role: "menuitem", tabindex: "-1"}
 
             .nav.navbar-nav.navbar-right
               = link_to('about', '#about')
