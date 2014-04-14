@@ -1,6 +1,8 @@
+= content_for :language_name do
+  = @language.name
+
 = render @language
 = render "links/new"
 
 :javascript
-  $('.language-name').val("#{@language.name}")
   $('.new-link-form').addClass('fade');
