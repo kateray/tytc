@@ -116,7 +116,11 @@ li {
     }
   }
 
-  .level-tag, .free-tag {
+  .free-tag {
+    color: gray;
+  }
+
+  .level-tag{
     margin: 5px;
     font-size: .4em;
     text-align: center;
@@ -125,9 +129,7 @@ li {
     bottom: 5px;
     font-weight: bold;
   }
-  .free-tag {
-    background: $dark-green;
-  }
+
   .level-tag {
 
 
