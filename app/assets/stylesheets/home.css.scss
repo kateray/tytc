@@ -2,6 +2,10 @@
 body {
   padding-top: 2.5em;
 
+  .navbar {
+    height: 2.5em;
+  }
+
   &.show {
     padding-top: 3.5em;
 
@@ -12,11 +16,15 @@ body {
   @media (min-width: $screen-sm-min) {
     padding-top: 4em;
 
+    .navbar {
+      height: 4em;
+    }
+
     &.show {
       padding-top: 4em;
 
       .navbar {
-        height: inherit;
+        height: 4em;
       }
     }
   }
@@ -36,12 +44,6 @@ a {
 }
 
 
-.navbar-right {
-
-  @media (min-width: $screen-sm-min) {
-    font-size: 0.7em;
-  }
-}
 
 .login-link {
   cursor: pointer;

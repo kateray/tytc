@@ -35,10 +35,13 @@
 }
 
 .navbar-right {
+
   @media (min-width: $screen-sm-min) {
-    padding: 30px 0px;
+    padding: 5px 0px;
+    font-size: 0.7em;
   }
 }
+
 
 .navbar {
   border-bottom: 0px;
