@@ -1,8 +1,24 @@
 
 body {
   padding-top: 2.5em;
+
+  &.show {
+    padding-top: 3.5em;
+
+    .navbar {
+      height: 3.5em;
+    }
+  }
   @media (min-width: $screen-sm-min) {
     padding-top: 4em;
+
+    &.show {
+      padding-top: 4em;
+
+      .navbar {
+        height: inherit;
+      }
+    }
   }
 }
 

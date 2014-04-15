@@ -28,6 +28,9 @@ $navbar-default-bg: $teal;
 
 // $navbar-height: 100px;
 
+$language-header-sm: 0.7em;
+$language-header-lg: 1.25em;
+
 $font-size-base: 20px;
 
 @import "bootstrap";
@@ -41,7 +44,7 @@ $font-size-base: 20px;
   box-shadow: none;
 
   li a {
-    font-size: 1.5em;
+    font-size: $language-header-lg;
     font-weight: bold;
     padding: 3px 10px;
 
@@ -55,8 +58,7 @@ $font-size-base: 20px;
   cursor: pointer;
 }
 
-$language-header-sm: 0.7em;
-$language-header-lg: 1.25em;
+
 
 @import "home";
 @import "language";

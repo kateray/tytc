@@ -11,7 +11,7 @@
   padding: 10px;
   @media (min-width: $screen-sm-min) {
     font-size: $language-header-lg;
-    padding: 30px 0px;
+    padding: 25px 20px;
   }
   color: black;
   font-weight: bold;
@@ -56,10 +56,8 @@
   .language-name {
     display:inline-block;
     width: 170px;
-    background-color: inherit;
-    border: 0px;
     border-bottom: 1px solid #000;
-    padding: 0px 9px;
+    padding: 0px 5px;
     font-size: $language-header-lg;
     font-weight: bold;
     cursor: pointer;
@@ -75,9 +73,10 @@
 
 .language-heading-name {
   font-size: $language-header-sm;
-  padding: 20px 0px;
+  padding: 20px;
 
   @media (min-width: $screen-sm-min) {
+    padding: 20px 0px;
     position: relative;
     font-size: $language-header-lg;
     z-index: 15;

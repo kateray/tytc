@@ -59,7 +59,8 @@
           %a.navbar-brand{:href => "/"}
             %img.hidden-xs{:src => asset_path("code-logo.png")}
             teach yourself to code
-            = yield :language_name
+            .language-name
+              = yield :language_name
           .mobile-right
             = link_to('about', '#about')
 
