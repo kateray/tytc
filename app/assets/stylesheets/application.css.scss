@@ -26,7 +26,7 @@ $container-large-desktop: 960px;
 $navbar-default-link-color: black;
 $navbar-default-bg: $teal;
 
-$navbar-height: 100px;
+// $navbar-height: 100px;
 
 $font-size-base: 20px;
 
@@ -54,6 +54,9 @@ $font-size-base: 20px;
 .dropdown-toggle {
   cursor: pointer;
 }
+
+$language-header-sm: 0.7em;
+$language-header-lg: 1.25em;
 
 @import "home";
 @import "language";
