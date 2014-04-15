@@ -3,6 +3,11 @@
     .link-head
       %span.link-title
         = link.title
+        .link-author
+          - if link.author
+            = link.author
+            |
+          = link.url_host
       .link-metadata
         - if !link.free
           %span.free-tag

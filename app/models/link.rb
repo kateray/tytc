@@ -43,6 +43,10 @@ class Link < ActiveRecord::Base
     end
   end
 
+  def url_host
+    URI.parse(self.url).host.reverse.chomp('.www').reverse
+  end
+
 
   #TODO Very Bad
   def level_name
