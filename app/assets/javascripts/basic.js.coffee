@@ -27,6 +27,7 @@ vote = (e) ->
   $.post "/votes",
     vote: link_id: linkId
     , (data) ->
+      $el.find('.vote-icon').addClass('voted')
       $el.find('.user-votes').append(data)
 
 ready = ->

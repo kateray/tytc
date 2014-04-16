@@ -46,13 +46,6 @@
               - else
                 %span.login-link{"data-toggle"=>"modal", "data-target"=>".login-form"}
                   sign in
-              - if params[:action] != "home"
-                - if current_user
-                  .add-link-button{"data-toggle"=>"modal", "data-target"=>".new-link-form"}
-                    + add link
-                - else
-                  .add-link-button{"data-toggle"=>"modal", "data-target"=>".login-form"}
-                    + add link
 
     %span.visible-xs
       %nav.navbar.navbar-default.navbar-fixed-top{:role=>"navigation"}

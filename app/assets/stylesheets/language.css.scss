@@ -31,10 +31,22 @@
 
 .add-link-button {
   font-weight: bold;
-  position: absolute;
-  bottom: 5px;
-  right: 0px;
+  font-size: 2em;
+  background-color: $green;
+  padding: 10px;
+  text-align: center;
+  visibility: hidden;
+  @media (min-width: $screen-sm-min) {
+    visibility: visible;
+  }
+  // position: absolute;
+  // bottom: 5px;
+  // right: 0px;
   cursor: pointer;
   // background-color: $green;
   // padding: 10px;
+
+  &:hover {
+    background-color: $dark-green;
+  }
 }

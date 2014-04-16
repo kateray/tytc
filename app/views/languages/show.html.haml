@@ -2,6 +2,15 @@
   = @language.name
 
 = render @language
+.block-container
+  .container.link-container
+    .col-sm-12
+      - if current_user
+        .add-link-button{"data-toggle"=>"modal", "data-target"=>".new-link-form"}
+          Add tutorial
+      - else
+        .add-link-button{"data-toggle"=>"modal", "data-target"=>".login-form"}
+          Add tutorial
 = render "links/new"
 
 :javascript

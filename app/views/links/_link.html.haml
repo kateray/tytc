@@ -18,11 +18,11 @@
           %span.user-votes
             - if current_user
               - if current_user.voted_on?(link.id)
-                %i.checkmark.voted.fa.fa-heart
+                %i.vote-icon.voted.fa.fa-heart
               - else
-                %i.checkmark.vote-button.fa.fa-heart
+                %i.vote-icon.vote-button.fa.fa-heart
             - else
-              %i.checkmark.fa.fa-heart{"data-toggle"=>"modal", "data-target"=>".login-form"}
+              %i.vote-icon.fa.fa-heart{"data-toggle"=>"modal", "data-target"=>".login-form"}
             = render link.votes
 
     .link-expanded.collapse

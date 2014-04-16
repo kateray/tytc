@@ -1,1 +1,2 @@
-= image_tag(vote.user.avatar_url, class: "avatar")
+= link_to "http://github.com/#{vote.user.username}", :target=>"_blank" do
+  = image_tag(vote.user.avatar_url, class: "avatar")
