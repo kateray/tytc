@@ -8,7 +8,7 @@
         = form_for [@language, @newLink], html: {class: "form-horizontal", role: "form"} do |f|
           = f.hidden_field :language, value: @language.id
           .form-group
-            = f.label :title, "What do you make?"
+            = f.label :title, "Title"
             = f.text_field :title, autocomplete: "off"
           .form-group
             = f.label :url, "URL"
