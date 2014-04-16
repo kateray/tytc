@@ -4,7 +4,7 @@
       %span.link-title
         = link.title
         .link-author
-          - if link.author
+          - if !link.author.blank?
             = link.author
             |
           = link.url_host
