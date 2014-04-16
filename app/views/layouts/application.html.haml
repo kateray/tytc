@@ -12,6 +12,7 @@
     <meta name = "description" content = "Link sharing site for the best programming tutorials and resources">
     = stylesheet_link_tag "application"
     = javascript_include_tag "application"
+    = render "shared/google_analytics"
     = csrf_meta_tag
   %body{:class => "#{controller_name} #{action_name}"}
     -# - if flash[:error]
