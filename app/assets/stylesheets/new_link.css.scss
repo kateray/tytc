@@ -35,6 +35,7 @@
 
   input, textarea {
     font-size: 0.7em;
+
     border: none;
 
     &:focus {
@@ -42,7 +43,29 @@
     }
   }
 
+  .form-group {
+    display: flex;
+    flex-wrap: wrap;
+
+    label {
+      margin-right: 15px;
+    }
+
+    input {
+      flex-grow: 1;
+      margin-right: 10px;
+    }
+
+    .row {
+      width: 100%;
+    }
+
+
+  }
+
   input {
+
+
     border-bottom: 1px solid black;
 
     &:focus {
