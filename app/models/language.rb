@@ -18,7 +18,7 @@ class Language < ActiveRecord::Base
   before_create :generate_slug
 
   def generate_slug
-    self.slug = self.name.downcase.gsub(/[\.\s\&]/, "-")
+    self.slug = self.name.downcase.gsub(/[^\w\-]+/, "-")
   end
 
   def to_param
